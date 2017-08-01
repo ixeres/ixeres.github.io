@@ -3,7 +3,12 @@
 @font-face
 /*Make font choices here.*/
 
-body, html { font-size: 100%; 	padding: 0; margin: 0;}
+/*body {
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Kanit', sans-serif;
+}*/
 
 /* Reset */
 *,
@@ -25,19 +30,22 @@ body, html { font-size: 100%; 	padding: 0; margin: 0;}
 	clear: both;
 }
 
-/*@font-face {
-	font-family: 'ecoico';
-	src:url('../fonts/ecoico.eot');
-	src:url('../fonts/ecoico.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/ecoico.woff') format('woff'),
-		url('../fonts/ecoico.ttf') format('truetype'),
-		url('../fonts/ecoico.svg#ecoico') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}*/
+.title {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  font-size: 3.5em;
+}
+
+article {
+  font-family: 'Kanit', sans-serif;
+}
 
 #main {
-  margin-left: 10%;
+  margin-left: 15%;
+}
+
+.title {
+  margin-left: 15%;
 }
 
 .left-nav {
