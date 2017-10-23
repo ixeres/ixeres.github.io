@@ -1,3 +1,56 @@
+/* STYLE RESET. FOR RESET THE STYLES. */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* END STYLE RESET. NOW CAN STYLE FOR REALS. */
+
 /* General Style */
 
 @font-face
@@ -30,6 +83,54 @@
 	clear: both;
 }
 
+/* End Clearfix */
+
+/* Navbar! */
+
+.site-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #ffffff;
+}
+
+.site-nav-list,
+.footer-nav-list {
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav-item {
+  float: left;
+  width: 18%;
+  height: 60px;
+  padding: 0.75em;
+  font-family: "Montserrat", "Source Code Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.6em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.site-nav-item > .fa {
+  font-size: 1.75rem;
+}
+
+.site-nav-item:hover {
+  background-color: #333333;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.site-nav-item-label {
+  display: block;
+  margin-top: 0.5em;
+}
+
+/* END NAVBAR! */
+
 .title {
   font-family: 'Orbitron', sans-serif;
   font-weight: bold;
@@ -42,72 +143,16 @@ body {
 
 article {
   font-family: 'Kanit', sans-serif;
+  padding: 50px;
 }
 
-#main {
-  margin-left: 15%;
+ul {
+  list-style-type: none;
 }
 
-.title {
-  margin-left: 15%;
+/* ABOUT */
+
+#about {
+  border: 1px solid black;
+  padding: 20px;
 }
-
-.left-nav {
-	position: fixed;
-	overflow: hidden;
-	top: 0;
-	left: 0;
-	height: 100%;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	background: #f7f7f7;
-}
-
-.left-nav li a {
-	display: block;
-	/*text-indent: -500em;*/
-	height: 5em;
-	width: 5em;
-	line-height: 5em;
-	text-align: center;
-	color: #999;
-	position: relative;
-	border-bottom: 1px solid rgba(0,0,0,0.05);
-	-webkit-transition: background 0.1s ease-in-out;
-	-moz-transition: background 0.1s ease-in-out;
-	transition: background 0.1s ease-in-out;
-}
-
-.left-nav li a:hover,
-.left-nav li:first-child a{
-	background: #47a3da;
-	color: #fff;
-}
-
-/* class for current item */
-.left-nav li.current a {
-	background: #fff;
-	color: #47a3da;
-}
-
-.left-nav li a:before {
-	font-style: normal;
-	font-weight: normal;
-	text-indent: 0em;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	-webkit-font-smoothing: antialiased;
-}
-
-/* Make the mobile-ready design changes */
-/*@media screen and (max-height: 34.9375em) {
-
-	.left-nav {
-		font-size: 70%;
-	}
-
-}*/
