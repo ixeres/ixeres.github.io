@@ -92,7 +92,7 @@ table {
   bottom: 0;
   left: 0;
   right: 0;
-  width: 100%;
+  width: 105%;
   z-index: 100;
   background-color: #ffffff;
 }
@@ -135,6 +135,12 @@ table {
   font-family: 'Orbitron', sans-serif;
   font-weight: bold;
   font-size: 3.5em;
+  padding-top: 50px;
+}
+
+#byline {
+  float: right;
+  padding-right: 20px;
 }
 
 body {
@@ -162,6 +168,10 @@ section {
   line-height: 1.5em;
 }
 
+p {
+  padding: 20px;
+}
+
 /* ABOUT */
 
 #about-slide {
@@ -180,6 +190,42 @@ section {
   text-transform: uppercase;
 }
 
+/* SKILLZZZZZZ (With FLEXBOX!) */
+
+/*Flex items*/
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.skills-item {
+	display: flex;
+  padding: 0.5em;
+	width: 100%;
+}
+@media all and (min-width: 40em) {
+  .skills-item {
+    width: 30%;
+  }
+}
+@media all and (min-width: 60em) {
+  .skills-item {
+    width: 20%;
+  }
+}
+.skills-img {
+	background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+	width: 100%;
+}
+.skills-img p {
+	flex: 1 0 auto;
+}
+
 /* PROJECTS SECTION */
 
 .container {
@@ -190,7 +236,7 @@ section {
 }
 
 #projects-list {
-  width: 600%;
+  width: 500%;
   -webkit-animation: projects-list 20s linear infinite;
 	-moz-animation: projects-list 20s linear infinite;
 	-ms-animation: projects-list 20s linear infinite;
