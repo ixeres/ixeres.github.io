@@ -134,8 +134,15 @@ table {
 /* END NAVBAR! */
 
 header {
-  background-color: #568add;
+  background: linear-gradient(180deg, #00cccc, #568add);
+  -webkit-animation: gradient-transition 30s ease infinite;
   padding-bottom: 80px;
+}
+
+@-webkit-keyframes gradient-transition {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
 }
 
 .title {
